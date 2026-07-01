@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from home.models import Contact, Review
 from datetime import date
 from django.contrib import messages
