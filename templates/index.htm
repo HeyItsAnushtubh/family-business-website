@@ -5,20 +5,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-  <title>Kale mango farms official website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Kale Mango Farms</title>
+  <style>
+    body {
+      background-color: #fffdf5;
+    }
+    .hero {
+      background: linear-gradient(135deg, #f9a825 0%, #388e3c 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      opacity: 0.92;
+    }
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+    }
+    .card-img-top {
+      border-radius: 12px 12px 0 0;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card .btn {
+      border-radius: 20px;
+      padding: 8px 24px;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 0.5px;
+    }
+    footer {
+      background-color: #212529;
+      color: #adb5bd;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Kale mango farms</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container">
+      <a class="navbar-brand" href="/">🥭 Kale Mango Farms</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+        aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
@@ -26,51 +79,65 @@
             <a class="nav-link" href="/mango_prices">Mango Prices</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact Us to buy mangoes</a>
+            <a class="nav-link" href="/contact">Order Mangoes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/review">Leave a review</a>
+            <a class="nav-link" href="/review">Leave a Review</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
 
-  <h1 class="text-center my-4">Welcome to the Kale Mango Farms Official website</h1>
+  <div class="hero">
+    <h1>Welcome to Kale Mango Farms</h1>
+    <p>Fresh Devgad Alphonso mangoes, straight from the farm to your door.</p>
+  </div>
 
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-auto">
-        <div class="card" style="width: 18rem; box-shadow: rgb(0, 0, 0) 5px 10px 30px; border-radius: 8px;">
+  <div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+
+      <div class="col">
+        <div class="card h-100">
           <img src="{% static 'mango.jpg' %}" class="card-img-top" alt="Delicious Mangoes">
-          <div class="card-body">
+          <div class="card-body d-flex flex-column">
             <h5 class="card-title">Delicious Mangoes</h5>
-            <p class="card-text">You are going to get the most delicious Devgad alphonso mangoes over here!</p>
-            <a href="/contact" class="btn btn-primary">Order our mangoes!</a>
+            <p class="card-text flex-grow-1">Get the most delicious Devgad Alphonso mangoes, known for their rich flavour and golden colour.</p>
+            <a href="/contact" class="btn btn-warning mt-2 fw-semibold">Order Now</a>
           </div>
         </div>
       </div>
 
-      <div class="col-auto">
-        <div class="card" style="width: 18rem; box-shadow: rgb(0, 0, 0) 5px 10px 30px; border-radius: 8px;">
+      <div class="col">
+        <div class="card h-100">
           <img src="{% static 'prices.jpg' %}" class="card-img-top" alt="Best Prices">
-          <div class="card-body">
+          <div class="card-body d-flex flex-column">
             <h5 class="card-title">Best Prices</h5>
-            <p class="card-text">Our mangoes always have the best prices. You can't get prices like this in the world</p>
-            <a href="/mango_prices" class="btn btn-primary">Check out the prices!</a>
+            <p class="card-text flex-grow-1">Our mangoes come at unbeatable prices — from a single mango to a full box of five dozen.</p>
+            <a href="/mango_prices" class="btn btn-success mt-2 fw-semibold">See Prices</a>
           </div>
         </div>
       </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'kat.jpg' %}" class="card-img-top" alt="About Our Farm">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">About Our Farm</h5>
+            <p class="card-text flex-grow-1">Grown with care in Devgad, our farm has been cultivating the finest Alphonso mangoes for years. Taste the difference.</p>
+            <a href="/review" class="btn btn-outline-success mt-2 fw-semibold">Share Your Experience</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    
-    ></script>
+  <footer>
+    &copy; 2026 Kale Mango Farms. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
