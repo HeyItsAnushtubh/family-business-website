@@ -1,0 +1,26 @@
+# Database
+db.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+*.env
+venv/
+env/
+
+# Django
+*.log
+local_settings.py
+
+# OS
+.DS_Store
+Thumbs.db
