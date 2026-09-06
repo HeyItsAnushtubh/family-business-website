@@ -80,4 +80,3 @@ Access the admin panel at `/admin/` to view all submitted orders and reviews.
 ## Notes
 
 - `db.sqlite3` is excluded from version control via `.gitignore` — do not commit it
-- The site is configured for Replit's proxied environment (`ALLOWED_HOSTS = ['*']`, `CSRF_TRUSTED_ORIGINS` set for `*.replit.dev` / `*.repl.co` / `*.replit.app`)
